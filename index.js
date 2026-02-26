@@ -7,7 +7,7 @@ window.addEventListener('load' , ()=>{
 function getUsers(){
     let html = ''
     // FETCH API
-    fetch('https://paoemployeesapi.onrender.com/api/users', { mode: 'cors' })
+    fetch('https://dragonball-api.com/api/characters/1', { mode: 'cors' })
         .then(response => {
             console.log(response);
             return response.json();
@@ -15,9 +15,10 @@ function getUsers(){
         .then(data => {
             console.log(data);
             data.forEach(element => {
-                html += `<li>${element.first_name} ${element.last_name}</li>`;
+                html += `<li>${element.name} ${element.ki}</li>`;
             });
             content.innerHTML = html;
         })
         
+
 }
