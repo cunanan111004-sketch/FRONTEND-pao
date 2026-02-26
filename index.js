@@ -7,7 +7,7 @@ window.addEventListener('load' , ()=>{
 function getUsers(){
     let html = ''
     // FETCH API
-    fetch('https://web.dragonball-api.com/', { mode: 'cors' })
+    fetch('https://dragonball-api.com/api/characters', { mode: 'cors' })
         .then(response => {
             console.log(response);
             return response.json();
@@ -22,4 +22,5 @@ function getUsers(){
         
 
 }
+
 
